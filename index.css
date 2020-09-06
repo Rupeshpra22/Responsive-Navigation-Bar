@@ -124,6 +124,7 @@ main{
 .text{
     font-size:2rem;
     text-align: center;
+    text-shadow: 1px 1px 3px black;
 }
 
 @media screen and (max-width:720px){
