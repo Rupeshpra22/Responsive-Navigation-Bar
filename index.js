@@ -19,6 +19,13 @@ hamburger.addEventListener('click', () => {
     }
 })
 
+navLinks.addEventListener('click',()=>{
+    hamburgerBtn.classList.remove('open');    
+    navLinks.classList.remove('navbar-open');
+    isOpen = false;    
+    nav.style.height="0px";
+})
+
 removeNavbarOpenClass = () => {
     // Get the width of the screen
     let screenWidth = window.innerWidth;
