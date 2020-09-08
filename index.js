@@ -9,21 +9,23 @@ hamburger.addEventListener('click', () => {
     if (!isOpen) {
         hamburgerBtn.classList.add('open');
         navLinks.classList.add('navbar-open');
-        nav.style.height="185px";
+        nav.style.height = "185px";
         isOpen = true;
     } else {
         hamburgerBtn.classList.remove('open');
         navLinks.classList.remove('navbar-open');
         isOpen = false;
-        nav.style.height="0px";
+        nav.style.height = "0px";
     }
 })
 
-navLinks.addEventListener('click',()=>{
-    hamburgerBtn.classList.remove('open');    
+navLinks.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('open');
     navLinks.classList.remove('navbar-open');
-    isOpen = false;    
-    nav.style.height="0px";
+    isOpen = false;
+    if (window.innerWidth < 720) {
+        nav.style.height = "0px";
+    }
 })
 
 removeNavbarOpenClass = () => {
@@ -32,7 +34,7 @@ removeNavbarOpenClass = () => {
     if (screenWidth > 600) {
         hamburgerBtn.classList.remove('open');
         navLinks.classList.remove('navbar-open');
-        nav.style.height="auto";
+        nav.style.height = "auto";
         isOpen = false;
     }
 }
